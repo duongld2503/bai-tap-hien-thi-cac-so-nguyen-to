@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = prompt("ban muon nhan bao nhieu so nguyen to dau tien? ");
+    let n = 2;
+    let count=0;
+    let text ='';
+    for (let i=1; i <= 100;i++) {
+        let sochiahet =0;
+        for (let j =1; j <= n; j++){
+               if(n%j == 0){
+                   sochiahet++;
+               }
+            }
+        if (sochiahet == 2){
+            text +=n;
+            count++;
+        }
+
+        if(count == numbers)
+            break;
+
+        n++;
+    }
+    document.write(text);
+</script>
+</body>
+</html>
